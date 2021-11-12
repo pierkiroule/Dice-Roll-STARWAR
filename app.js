@@ -42,6 +42,14 @@ function init() {
   
   ambiance.play();
 
+  //Gestion du statut gagnant. Désactiver au démarrage du jeu
+  document.getElementById('name-0').textContent = 'PADAWAN 1';
+  document.getElementById('name-1').textContent = 'PADAWAN 2'; 
+  document.querySelector('.player-0-panel').classList.remove('winner');
+  document.querySelector('.player-1-panel').classList.remove('winner');
+  document.querySelector('.player-0-panel').classList.remove('active');
+  document.querySelector('.player-1-panel').classList.remove('active');
+
 };
 
 
