@@ -107,3 +107,22 @@ body {
 .btn-roll { top: 100px;}
 .btn-hold { top: 150px;}
 .btn-rules { top: 700px; color: rgb(8, 153, 211); width: 200; font-size: 15px;}
+
+/* Dice images */
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 220px;
+    transform: translateX(-50%);
+    height: 300px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+/* anim */
+.anim {
+    position: absolute;
+    left: 50%;
+    top: 280px;
+    transform: translateX(-50%);
+    height: 200px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
