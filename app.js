@@ -1,7 +1,9 @@
 //Déclarartion des variables principales
-
 var scores, roundScore, activePlayer, gamePlaying;
+//constantes pour effets audio
 const ambiance = new Audio('Audio/ambiance.mp3');
+const audioDice = new Audio('Audio/fx1.mp3');
+const audioHold = new Audio('Audio/fx2.mp3');
 
 /**************************/
 /* INITIALISONS LE JEU */
@@ -67,4 +69,48 @@ function nextPlayer() {
     document.querySelector('.anim').style.display = 'none';
 
 };
+
+/*********************************/
+/*LANCER LE DE (LA FORCE STARWARS ;)*/
+/********************************/
+// Nous utilisons une fonction anonyme pour gérer le lancé de dé. Dans notre cas Starwars, nous choisissons la valeur 6 (comme un paradoxe, la force 6 est trop puissante et annule la force) comme condition de la perte des points du round score.
+// Sélectionnon
+document.querySelector('.btn-roll').addEventListener('click', function(){
+    
+    
+    // SI la partie est lancée ALORS...
+    if(gamePlaying) {
+
+        //nombre aléatoire pour la force, le dé en fait !
+        var dice = Math.floor(Math.random() * 6) + 1;
+        // nombre aléatoire pour les images de fin de partie (des images aléatoires qui dynamiseront le jeu. A chaque partie on découvre un gif animé starwars)
+        var anim = Math.floor(Math.random() * 10) + 1;
+
+        // afficher les images résultat du dé
+        var diceDOM = document.querySelector('.dice');
+        diceDOM.style.display = 'block';
+        diceDOM.src = 'dicegif/dice-' + dice + '.gif';    
+
+        //Idem pour les gifs animés. Ne pas les afficher au début.
+        var animDOM = document.querySelector('.anim');
+        animDOM.style.display = 'none';
+        animDOM.src = 'Anim/anim-' + dice + '.gif'; 
+
+        // SI dice est strictement inégal à force 6 ALORS on ajoute le score SINON on perd le tour et on change de joueur.
+        if(dice !== 6) {       
+            
+            roundScore += dice;    
+            document.querySelector('#current-' + activePlayer).textContent = roundScore;
+        } else {
+           
+            nextPlayer();
+        }
+
+    }
+    
+}
+// ajout des effets audio pour le lancé et pause de l'ambiance musicale. On ajoute les constantes dans la déclaration des variables tout en haut. const audioDice = new Audio('Audio/fx1.mp3') const audioHold = new Audio('Audio/fx2.mp3')
+audioDice.play();
+ambiance.pause();
+    );
 
