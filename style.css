@@ -21,18 +21,6 @@ body {
     padding: 20px;
 }
 
-.pad
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    
-    
-    height: 100px;
-    width: 100px;
-}
-
 .player-name {
     color: #6b6969;
     font-size: 30px;
@@ -45,6 +33,18 @@ body {
     position: relative;
 }
 
+.pad
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+
+
 .player-score{
     text-align: center;
     font-size: 80px;
@@ -55,8 +55,9 @@ body {
 
 .player-global-label {
     text-align: center;
+    top:5px;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 100;
     color: #d7dddf;
     
  
@@ -106,7 +107,7 @@ body {
 .btn-new { top: 550px;}
 .btn-roll { top: 100px;}
 .btn-hold { top: 150px;}
-.btn-rules { top: 700px; color: rgb(8, 153, 211); width: 200; font-size: 15px;}
+.btn-rules { top: 650px; color: rgb(8, 153, 211); width: 200; font-size: 15px;}
 
 /* Dice images */
 .dice {
@@ -114,7 +115,7 @@ body {
     left: 50%;
     top: 220px;
     transform: translateX(-50%);
-    height: 300px;
+    height: 320px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 /* anim */
@@ -126,3 +127,216 @@ body {
     height: 200px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
+
+
+@media screen and (max-width:800px){
+
+    .player-0-panel, .player-1-panel {
+    
+        border-radius: 10%;
+        padding: 10px;
+    }
+    .player-name {
+        
+        font-size: 25px;
+        font-weight: 90;
+        margin-top: 20px;
+        margin-bottom: 10px;
+       
+    }
+
+    .pad
+{
+       
+    height: 80px;
+    width: 80px;
+
+
+}
+    .player-score {
+        text-align: center;
+        font-size: 60px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 130px;
+    }
+    /* Dice images */
+.dice {
+    top: 240px;
+    height: 150px;
+}
+/* anim */
+.anim {
+    top: 280px;
+    
+    height: 150px;
+ 
+}
+/* Specific buttons */
+.btn-new { top: 500px;}
+.btn-roll { top: 100px;}
+.btn-hold { top: 150px;}
+.btn-rules { top: 570px; color: rgb(8, 153, 211); width: 400; font-size: 15px;}
+    
+  }
+
+  /* MEDIA QUERIES */
+  
+  @media screen and (max-width:700px){
+
+    .player-0-panel, .player-1-panel {
+    
+        border-radius: 0%;
+        padding: 1px;
+    }
+    .player-name {
+        
+        font-size: 19px;
+        font-weight: 80;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        }
+
+    .pad
+    {
+        height: 70px;
+        width: 70px;
+    
+    
+    }
+    .player-score {
+        
+        font-size: 50px;
+        
+        
+    }
+    
+    /* Dice images */
+    .dice {
+        top: 240px;
+        height: 100px;
+    }
+    /* anim */
+    .anim {
+        top: 240px;
+        height: 100px;
+    }
+    .btn {
+        
+        width: 150px;
+        left: 50%;
+         font-size: 15px;
+   }
+    /* Specific buttons */
+.btn-new { top: 410px;}
+.btn-roll { top: 100px;}
+.btn-hold { top: 150px;}
+.btn-rules { top: 490px; color: rgb(8, 153, 211); width: 400; font-size: 15px;}
+
+.active .player-name::after {font-size: 37px;}
+  }
+  
+  @media screen and (max-width:600px){
+
+    .player-0-panel, .player-1-panel {
+    
+        border-radius: 0%;
+        padding: 1px;}
+
+    .player-name {
+        
+        font-size: 18px;
+        font-weight: 70;
+      
+           }
+
+    .pad
+    {
+        display: none;
+        height: 60px;
+        width: 60px;
+    
+    
+    }
+    .player-score {
+        
+        font-size: 40px;
+        
+    }
+     /* Dice images */
+.dice {
+
+    top: 240px;
+    height: 100px;
+    
+}
+/* anim */
+.anim {
+    top: 210px;
+    height: 100px;
+}
+.btn {
+    
+    width: 100px;
+    font-size: 13px;
+}
+/* Specific buttons */
+.btn-new { top: 400px;}
+.btn-roll { top: 100px;}
+.btn-hold { top: 150px;}
+.btn-rules { top: 470px; color: rgb(8, 153, 211); width: 400; font-size: 12px;}
+
+.active .player-name::after {font-size: 37px;}
+    
+  }
+  
+  @media screen and (max-width:480px){
+    .player-0-panel, .player-1-panel {
+    
+        border-radius: 0%;
+        padding: 1px;}
+
+    .player-name {
+        font-size: 16px;
+        font-weight: 60;
+        
+          
+    }
+    .pad
+    {
+        display: none;
+         height: 50px;
+        width: 50px;
+    
+    
+    }
+    .player-score {
+        
+        font-size: 30px;
+        
+    }
+        /* Dice images */
+.dice {
+    top: 240px;
+    height: 100px;
+}
+/* anim */
+.anim {
+    top: 240px;
+    height: 60px;
+}
+.btn {
+    
+    width: 100px;
+    font-size: 12px;
+    
+}
+/* Specific buttons */
+.btn-new { top: 450px;}
+.btn-roll { top: 150px;}
+.btn-hold { top: 200px;}
+.btn-rules { top: 510px; color: rgb(8, 153, 211); width: 400; font-size: 15px;}
+
+.active .player-name::after {font-size: 37px;}
+    }
+  
