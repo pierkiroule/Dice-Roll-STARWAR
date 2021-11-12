@@ -18,6 +18,7 @@ init();
 document.querySelector(".btn-new").addEventListener('click', init);
 
 function init() {
+    
   //notre variable booléenne est vraie car nous lançons le jeu
   gamePlaying = true;
 // Comment sont initialisées au début du jeu nos valeurs de la variable score global (Jedïforce) et score courant (Padaforce)
@@ -26,7 +27,7 @@ function init() {
 // quel va être le joueur activé 0 (padawan1) ou 1 (padawan 2). Padawan 1 jouera en premier !
   activePlayer = 0;
 
-  // Comment sont afficher des images et animations au début du jeu
+  // Afficher ou pas des images et animations au début du jeu
   document.querySelector('.dice').style.display = 'none';
   document.querySelector('.anim').style.display = 'block';
 
@@ -47,10 +48,16 @@ function init() {
   //Gestion du statut gagnant. Désactiver au démarrage du jeu
   document.getElementById('name-0').textContent = 'PADAWAN 1';
   document.getElementById('name-1').textContent = 'PADAWAN 2'; 
+
   document.querySelector('.player-0-panel').classList.remove('winner');
   document.querySelector('.player-1-panel').classList.remove('winner');
+
   document.querySelector('.player-0-panel').classList.remove('active');
   document.querySelector('.player-1-panel').classList.remove('active');
+
+  //important a indiquer pour afficher le style css du panneau actif pour le joueur actif et désactiver pour l'autre padawan
+    document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add('active');
 
   
 
@@ -90,11 +97,15 @@ function nextPlayer() {
 
 // Nous utilisons une fonction anonyme pour gérer le lancé de dé. Dans notre cas Starwars, nous choisissons la valeur 6 (comme un paradoxe, la force 6 est trop puissante et annule la force) comme condition de la perte des points du round score.
 // Sélectionnon
-document.querySelector('.btn-roll').addEventListener('click', function(){
+document.querySelector('.btn-roll').addEventListener('click', function()
+{//audio fx
+    audioDice.play();
+    ambiance.pause();
     
     
     // SI la partie est lancée ALORS...
-    if(gamePlaying) {
+    if(gamePlaying) 
+    {
 
         //nombre aléatoire pour la force, le dé en fait !
         var dice = Math.floor(Math.random() * 6) + 1;
@@ -112,23 +123,18 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         animDOM.src = 'Anim/anim-' + dice + '.gif'; 
 
         // SI dice est strictement inégal à force 6 ALORS on ajoute le score SINON on perd le tour et on change de joueur.
-        if(dice !== 6) {       
-            
-            roundScore += dice;    
-            document.querySelector('#current-' + activePlayer).textContent = roundScore;
-        } else {
-           
-            nextPlayer();
+        if(dice !== 6) 
+        { roundScore += dice;    
+        document.querySelector('#current-' + activePlayer).textContent = roundScore;
+        } else 
+        { nextPlayer();
         }
 
     }
-    // ajout des effets audio pour le lancé et pause de l'ambiance musicale. On ajoute les constantes dans la déclaration des variables tout en haut. const audioDice = new Audio('Audio/fx1.mp3') const audioHold = new Audio('Audio/fx2.mp3')
-audioDice.play();
-ambiance.pause();
-    
-}
 
-    );
+
+    
+});
 
 
 
@@ -137,10 +143,12 @@ ambiance.pause();
 /*************************************/
 
 //Sélectionner le bouton hold 
-document.querySelector('.btn-hold').addEventListener('click', function() {
-
+document.querySelector('.btn-hold').addEventListener('click', function()
+{ // ajouter l'effet audio
+    audioHold.play();
 // SI la partie est lancée ALORS on incrémente le score global avec les points du score courant.   
-    if(gamePlaying) {
+    if(gamePlaying)
+    {
 
         scores[activePlayer] += roundScore; 
 
@@ -148,7 +156,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
 // VERIFIER SI LE JOUEUR GAGNE. IF score global est égal ou superieur à score max. Dans notre cas, nous choisissons le nombre 12 car nous aimons bien le nombre 12. c'est notre nombre porte bonheur ! Plus sérieusement, cela permet de tester notre jeu plus facilement que le nombre 100.
-        if(scores[activePlayer] >= 12) {
+        if(scores[activePlayer] >= 12)
+        {
             // afficher une anim pour le gagnant
             document.querySelector('.anim').style.display = 'block';
 
@@ -167,12 +176,13 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
             // FIN de partie
             gamePlaying = false;
 
-        } else {
+        } else
+        {
             //SINON SI score global n'atteind pas le max défini alors on passe au joueur suivant
             nextPlayer();
         }
-        // ajouter l'effet audio
-        audioHold.play(); }
+        
+    }
 }
 
 
