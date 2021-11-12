@@ -1,9 +1,10 @@
 //Déclarartion des variables principales
 
 var scores, roundScore, activePlayer, gamePlaying;
+const ambiance = new Audio('Audio/ambiance.mp3');
 
 /**************************/
-/* INITIALISON LE JEU */
+/* INITIALISONS LE JEU */
 /************************/
 
 //initialisons le jeu. SI l'utilisateur clique sur le bouton "newgame"" ALORS une fonction javascript initialise les scores, les affichages des images, les sons etc.
