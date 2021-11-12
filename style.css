@@ -87,6 +87,22 @@ body {
     font-size: 25px;
 }
 
+/*JOUEUR ACTIF*/
+.active { background-image: linear-gradient(rgba(16, 161, 142, 0.4), rgba(0, 0, 0, 0.4)), url(Images/fond.jpg);
+    
+}
+.active .player-name { font-weight: bold; 
+   color: #ffffff;}
+
+.active .player-name::after {
+   content: "\263A";
+   font-size: 67px;
+   position: absolute;
+   color: #0fd1df;
+   top: -7px;
+    
+}
+
 /* Bouttons */
 .btn {
     position: absolute;
@@ -341,4 +357,6 @@ body {
     }
   
  /* Winner status */ 
-.winner { background-image: linear-gradient(rgba(16, 161, 142, 0.4), rgba(0, 0, 0, 0.4)), url(fondwin.jpg);
+.winner { background-image: linear-gradient(rgba(16, 161, 142, 0.4), rgba(0, 0, 0, 0.4)), url(/Images/fondwin.jpg);
+
+    
