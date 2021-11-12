@@ -4,6 +4,8 @@ var scores, roundScore, activePlayer, gamePlaying;
 const ambiance = new Audio('Audio/ambiance.mp3');
 const audioDice = new Audio('Audio/fx1.mp3');
 const audioHold = new Audio('Audio/fx2.mp3');
+const audioWin = new Audio('Audio/win.mp3');
+const audioOuch = new Audio('Audio/ouch.mp3');
 
 /**************************/
 /* INITIALISONS LE JEU */
@@ -127,7 +129,10 @@ document.querySelector('.btn-roll').addEventListener('click', function()
         { roundScore += dice;    
         document.querySelector('#current-' + activePlayer).textContent = roundScore;
         } else 
-        { nextPlayer();
+        {
+            audioOuch.play();
+            audioDice.pause();
+            nextPlayer();
         }
 
     }
@@ -157,7 +162,9 @@ document.querySelector('.btn-hold').addEventListener('click', function()
 
 // VERIFIER SI LE JOUEUR GAGNE. IF score global est égal ou superieur à score max. Dans notre cas, nous choisissons le nombre 12 car nous aimons bien le nombre 12. c'est notre nombre porte bonheur ! Plus sérieusement, cela permet de tester notre jeu plus facilement que le nombre 100.
         if(scores[activePlayer] >= 12)
-        {
+        {  
+            //audio gagnant
+            audioWin.play();
             // afficher une anim pour le gagnant
             document.querySelector('.anim').style.display = 'block';
 
@@ -167,6 +174,7 @@ document.querySelector('.btn-hold').addEventListener('click', function()
             // cacher l'image du dé (de la FORCE)
             document.querySelector('.dice').style.display = 'none';
 
+            
             // activer le style css du panneau en mode winner
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
 
@@ -175,6 +183,7 @@ document.querySelector('.btn-hold').addEventListener('click', function()
 
             // FIN de partie
             gamePlaying = false;
+            
 
         } else
         {
@@ -192,12 +201,21 @@ document.querySelector('.btn-hold').addEventListener('click', function()
 /*Regle du JEU*/
 /**************/
 function regleDuJeu() {
-    var txt;
-    if (confirm("A suivre") )
-  {
-      txt = "You pressed OK!";
-    } else {
-      txt = "You pressed Cancel!";
-    }
-    document.getElementById("rule").innerHTML = txt;
+   
+   confirm("Il vous faut chers Padawans apprendre à capter la force avec prudence et sagesse. Concentrez vous et pensez bien à stocker la force au moment opportun. Vous désirez capter la force mais attention... Trop de force et d'impatience... tue la force virtuelle accumulée (La PADAFORCE). Votre mission est de cumuler 12 points de Jedï force. Que le meilleur gagne ! Mister YODA") 
   };
+
+  /****************/
+/*credit*/
+/**************/
+function credit() {
+   
+    confirm("Merci à giphy.com pour les gifs et pierkiroule pour les sons") 
+   };
+ 
+   
+   
+   
+  
+  
+  

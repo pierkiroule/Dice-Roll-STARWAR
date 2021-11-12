@@ -56,12 +56,9 @@ body {
 .player-global-label {
     text-align: center;
     top:5px;
-    font-size: 20px;
-    font-weight: 100;
+    font-size: 17px;
+    font-weight: 400;
     color: #d7dddf;
-    
- 
-
 }
 
 .player-current-box {
@@ -72,7 +69,7 @@ body {
     padding: 12px;
     text-align: center;
     border-radius: 50%;
-    
+
 }
 
 .player-current-label {
@@ -123,7 +120,22 @@ body {
 .btn-new { top: 550px;}
 .btn-roll { top: 100px;}
 .btn-hold { top: 150px;}
-.btn-rules { top: 650px; color: rgb(8, 153, 211); width: 200; font-size: 15px;}
+.btn-rules {
+    top: 650px;
+    width: 200;
+    font-size: 15px;
+    color: rgb(22, 143, 241);
+    background: none;
+    border: none;}
+
+.btn-credit {
+    top: 900px;
+    color: #555;
+    background: none;
+    border: none;
+    font-weight: 300;
+    color: #313233;
+ }
 
 /* Dice images */
 .dice {
@@ -144,6 +156,15 @@ body {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
+ /* Winner status */ 
+ .winner { background-image: linear-gradient(rgba(16, 161, 142, 0.4), rgba(0, 0, 0, 0.4)), url(Images/fondwin.jpg);}
+
+ .winner .player-name { font-weight: bold; color: #f4f5f7; }
+ 
+ 
+ 
+     
+ 
 
 @media screen and (max-width:800px){
 
@@ -192,9 +213,14 @@ body {
 .btn-new { top: 500px;}
 .btn-roll { top: 100px;}
 .btn-hold { top: 150px;}
-.btn-rules { top: 570px; color: rgb(8, 153, 211); width: 400; font-size: 15px;}
+.btn-rules { top: 570px;width: 400; font-size: 15px;}
     
   }
+
+  .btn-credit {
+    left: 50%;
+    top: 650px;
+   }
 
   /* MEDIA QUERIES */
   
@@ -247,9 +273,13 @@ body {
 .btn-new { top: 410px;}
 .btn-roll { top: 100px;}
 .btn-hold { top: 150px;}
-.btn-rules { top: 490px; color: rgb(8, 153, 211); width: 400; font-size: 15px;}
+.btn-rules { top: 490px; width: 400; font-size: 15px;}
 
 .active .player-name::after {font-size: 37px;}
+
+.btn-credit {
+    top: 600px;
+   }
   }
   
   @media screen and (max-width:600px){
@@ -300,11 +330,16 @@ body {
 .btn-new { top: 400px;}
 .btn-roll { top: 100px;}
 .btn-hold { top: 150px;}
-.btn-rules { top: 470px; color: rgb(8, 153, 211); width: 400; font-size: 12px;}
-
+.btn-rules { top: 470px; width: 200; font-size: 12px;}
+.btn-credit {
+    top: 600px;
+    bottom: -50px;
+   }
 .active .player-name::after {font-size: 37px;}
     
   }
+
+  
   
   @media screen and (max-width:480px){
     .player-0-panel, .player-1-panel {
@@ -343,19 +378,21 @@ body {
 }
 .btn {
     
-    width: 100px;
+    width: 50px;
     font-size: 12px;
     
 }
+
 /* Specific buttons */
-.btn-new { top: 450px;}
+.btn-new { top: 420px;}
 .btn-roll { top: 150px;}
 .btn-hold { top: 200px;}
-.btn-rules { top: 510px; color: rgb(8, 153, 211); width: 400; font-size: 15px;}
+.btn-rules { top: 540px; width: 100; font-size: 15px;}
 
-.active .player-name::after {font-size: 37px;}
+.active .player-name::after {font-size: 35px;}
     }
-  
- /* Winner status */ 
-.winner { background-image: linear-gradient(rgba(16, 161, 142, 0.4), rgba(0, 0, 0, 0.4)), url(/Images/fondwin.jpg);
+    
+
+
+
 
