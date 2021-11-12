@@ -1,20 +1,19 @@
 /* Page */
 body {
     background-color: rgb(0, 0, 0);
- 
     background-size: cover;
     background-position: center;
     font-family: Lato;
     font-weight: 300;
     position: relative;
     height: 100vh;
-    color: rgb(0, 0, 0);
+   
 }
 
 /* Panneaux */
 .player-0-panel, .player-1-panel {
     
-    border-radius: 50%;
+    border-radius: 10%;
     width: 50%;
     float: left;
     height: 50%;
@@ -91,30 +90,18 @@ body {
 .active .player-name { font-weight: bold; 
    color: #ffffff;}
 
-.active .player-name::after {
-   content: "\263A";
-   font-size: 67px;
-   position: absolute;
-   color: #0fd1df;
-   top: -7px;
-    
-}
+
 
 /* Bouttons */
 .btn {
+    
     position: absolute;
-    width: 200px;
+    width: 100px;
     left: 50%;
     transform: translateX(-50%);
-    color: #555;
-    background: none;
-    border: none;
-    font-family: Lato;
-    font-size: 20px;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+   font-family: Lato;
+    font-size: 12px;
+
 }
 
 .btn-new { top: 550px;}
@@ -269,6 +256,17 @@ body {
         left: 50%;
          font-size: 15px;
    }
+
+   .btn {
+    
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+   font-family: Lato;
+    font-size: 10px;
+
+}
     /* Specific buttons */
 .btn-new { top: 410px;}
 .btn-roll { top: 100px;}
