@@ -9,14 +9,16 @@ const audioHold = new Audio('Audio/fx2.mp3');
 /* INITIALISONS LE JEU */
 /************************/
 
+// Initialiser
+init();
+
 //initialisons le jeu. SI l'utilisateur clique sur le bouton "newgame"" ALORS une fonction javascript initialise les scores, les affichages des images, les sons etc.
 
 // Le bouton et évènement associé. Javascript écoute SI un évènement "click sur le bouton newgame" se produit. Pour écouter, nous indiquons une sélection queryselector pour aider javascript à écouter le bon bouton. SI bouton activé, ALORS function init(){}. Quelles instructions allons-nous insérer dans {};
 document.querySelector(".btn-new").addEventListener('click', init);
 
 function init() {
-  
-//notre variable booléenne est vraie car nous lançons le jeu
+  //notre variable booléenne est vraie car nous lançons le jeu
   gamePlaying = true;
 // Comment sont initialisées au début du jeu nos valeurs de la variable score global (Jedïforce) et score courant (Padaforce)
   scores = [0, 0];
@@ -28,8 +30,8 @@ function init() {
   document.querySelector('.dice').style.display = 'none';
   document.querySelector('.anim').style.display = 'block';
 
-
   // réinitialiser l'affichage de nos scores à 0, pour chacun de nos joueurs (les padawans)
+  document.getElementById('score-0').textContent = '0';
   document.getElementById('score-1').textContent = '0';
   document.getElementById('current-0').textContent = '0';
   document.getElementById('current-1').textContent = '0'; 
@@ -49,6 +51,8 @@ function init() {
   document.querySelector('.player-1-panel').classList.remove('winner');
   document.querySelector('.player-0-panel').classList.remove('active');
   document.querySelector('.player-1-panel').classList.remove('active');
+
+  
 
 };
 
@@ -82,8 +86,7 @@ function nextPlayer() {
 /*LANCER LE DE (LA FORCE STARWARS ;)*/
 /********************************/
 
-// Initialiser
-init();
+
 
 // Nous utilisons une fonction anonyme pour gérer le lancé de dé. Dans notre cas Starwars, nous choisissons la valeur 6 (comme un paradoxe, la force 6 est trop puissante et annule la force) comme condition de la perte des points du round score.
 // Sélectionnon
@@ -175,7 +178,9 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 
 );
-
+/****************/
+/*Regle du JEU*/
+/**************/
 function regleDuJeu() {
     var txt;
     if (confirm("A suivre") )
