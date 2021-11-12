@@ -24,44 +24,66 @@
 
 <!-- Construction de l'interface utilisateur UI -->
 
-    <!-- Player 0 panneau -->
-<div class="d-flex text-center">
-    <div class="container">
-         <div class="player-0-panel active"></div>
-            <div class="player-name" id="name-0">Player 1</div>
-            <img src="pad1.jpg" alt="Pad" class="pad rounded-circle" id="pad1"></div>
-            <div class="player-score" id="score-0">43</div>
-            <div class="player-current-box"></div>
-            <div class="player-current-label">PadaForce</div>
-            <div class="player-current-score" id="current-0">11</div>
-        </div>
-            
+        <!-- Player 0 panneau -->
+      
+        <div class="container">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <img src="Images/pad1.jpg" alt="Pad" class="pad rounded-circle" id="pad1">
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">PadaForce</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
             <!-- Fin du player 0 panneau -->
-    
-        <!-- Player 1 panneaul -->
-        <div class="player-1-panel">
-            <div class="player-name" id="name-1">Player 2</div>
-            <img src="pad2.jpg" alt="Pad" class="pad rounded-circle" id="pad2"></div>
+            
+            <!-- Player 1 panneau -->
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <img src="Images/pad2.jpg" alt="Pad" class="pad rounded-circle" id="pad2">
+              
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">PadaForce</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            <!-- End of player 1 panneau -->
+            
+            <!-- Buttons -->
+            <button class="btn-new btn btn-secondary btn-lg">NOUVELLE PARTIE</button>
+            <button class="btn-roll btn btn-danger btn-lg ">CAPTER</button>
+            <button class="btn-hold btn btn-primary btn-lg">STOCKER</button>
+            
+               
+
+
+<div class="container"><button class="btn btn-rules" onclick="regleDuJeu()">REGLES <br>"Le hasard est la force !</button>
+
+<p id="rule"></p>
+
+
+
+            
+
+            
+            <!-- Dice images -->
+          <img src="dicegif/dice-1.gif" alt="Dice" class="dice rounded-circle" id="dice">
+            <img src="Anim/anim-5.gif" alt="Anim" class="anim rounded-circle" id="anim">
+
+            
+            
+            
+        </div>
+        <div class="player-global-label">Jeune Padawan, la force du 12 tu atteindras...<br> sans y perdre prudence et sagesse<br>Maître Yoda</div>
+          </div>
+
           
-            <div class="player-score" id="score-1">72</div>
-            <div class="player-current-box"></div>
-            <div class="player-current-label">PadaForce</div>
-             <div class="player-current-score" id="current-1">0</div>
-         </div>
-        <!-- End of player 1 paneeaul -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+        <!-- JavaScript external files -->
+        <!-- <script src="app.js"></script> -->
+        <script src="app.js"></script>
 
 
 
