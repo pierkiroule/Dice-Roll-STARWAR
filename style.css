@@ -16,7 +16,7 @@ body {
     border-radius: 10%;
     width: 50%;
     float: left;
-    height: 50%;
+    height: 100%;
     padding: 20px;
 }
 
@@ -128,18 +128,18 @@ body {
 .dice {
     position: absolute;
     left: 50%;
-    top: 220px;
+    top: 200px;
     transform: translateX(-50%);
-    height: 320px;
+    height: 200px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 /* anim */
 .anim {
     position: absolute;
     left: 50%;
-    top: 280px;
+    top: 250px;
     transform: translateX(-50%);
-    height: 200px;
+    height: 150px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
@@ -187,20 +187,20 @@ body {
     /* Dice images */
 .dice {
     top: 240px;
-    height: 150px;
+    height: 110px;
 }
 /* anim */
 .anim {
-    top: 280px;
+    top: 290px;
     
     height: 150px;
  
 }
 /* Specific buttons */
-.btn-new { top: 500px;}
+.btn-new { top: 460px;}
 .btn-roll { top: 100px;}
 .btn-hold { top: 150px;}
-.btn-rules { top: 570px;width: 400; font-size: 15px;}
+.btn-rules { top: 590px;width: 400; font-size: 15px;}
     
   }
 
@@ -243,18 +243,18 @@ body {
     /* Dice images */
     .dice {
         top: 240px;
-        height: 100px;
+        height: 90px;
     }
     /* anim */
     .anim {
-        top: 240px;
-        height: 100px;
+        top: 190px;
+        height: 80px;
     }
     .btn {
         
         width: 150px;
         left: 50%;
-         font-size: 15px;
+         font-size: 12px;
    }
 
    .btn {
@@ -268,12 +268,12 @@ body {
 
 }
     /* Specific buttons */
-.btn-new { top: 410px;}
+.btn-new { top: 380px;}
 .btn-roll { top: 100px;}
 .btn-hold { top: 150px;}
-.btn-rules { top: 490px; width: 400; font-size: 15px;}
+.btn-rules { top: 480px; width: 400; font-size: 15px;}
 
-.active .player-name::after {font-size: 37px;}
+
 
 .btn-credit {
     top: 600px;
@@ -310,14 +310,14 @@ body {
      /* Dice images */
 .dice {
 
-    top: 240px;
-    height: 100px;
+    top: 190px;
+    height: 80px;
     
 }
 /* anim */
 .anim {
-    top: 210px;
-    height: 100px;
+    top: 220px;
+    height: 80px;
 }
 .btn {
     
@@ -328,12 +328,12 @@ body {
 .btn-new { top: 400px;}
 .btn-roll { top: 100px;}
 .btn-hold { top: 150px;}
-.btn-rules { top: 470px; width: 200; font-size: 12px;}
+.btn-rules { top: 480px; width: 200; font-size: 12px;}
 .btn-credit {
     top: 600px;
     bottom: -50px;
    }
-.active .player-name::after {font-size: 37px;}
+
     
   }
 
@@ -366,28 +366,27 @@ body {
     }
         /* Dice images */
 .dice {
-    top: 240px;
-    height: 100px;
+    top: 190px;
+    height:80px;
 }
 /* anim */
 .anim {
-    top: 240px;
+    top: 190px;
     height: 60px;
 }
 .btn {
     
     width: 50px;
-    font-size: 12px;
+    font-size: 10px;
     
 }
 
 /* Specific buttons */
-.btn-new { top: 420px;}
+.btn-new { top: 300px;}
 .btn-roll { top: 150px;}
 .btn-hold { top: 200px;}
-.btn-rules { top: 540px; width: 100; font-size: 15px;}
+.btn-rules { top: 590px; width: 100; font-size: 15px;}
 
-.active .player-name::after {font-size: 35px;}
     }
     
 
