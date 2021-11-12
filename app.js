@@ -81,6 +81,10 @@ function nextPlayer() {
 /*********************************/
 /*LANCER LE DE (LA FORCE STARWARS ;)*/
 /********************************/
+
+// Initialiser
+init();
+
 // Nous utilisons une fonction anonyme pour gérer le lancé de dé. Dans notre cas Starwars, nous choisissons la valeur 6 (comme un paradoxe, la force 6 est trop puissante et annule la force) comme condition de la perte des points du round score.
 // Sélectionnon
 document.querySelector('.btn-roll').addEventListener('click', function(){
@@ -115,11 +119,12 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         }
 
     }
-    
-}
-// ajout des effets audio pour le lancé et pause de l'ambiance musicale. On ajoute les constantes dans la déclaration des variables tout en haut. const audioDice = new Audio('Audio/fx1.mp3') const audioHold = new Audio('Audio/fx2.mp3')
+    // ajout des effets audio pour le lancé et pause de l'ambiance musicale. On ajoute les constantes dans la déclaration des variables tout en haut. const audioDice = new Audio('Audio/fx1.mp3') const audioHold = new Audio('Audio/fx2.mp3')
 audioDice.play();
 ambiance.pause();
+    
+}
+
     );
 
 
@@ -163,8 +168,21 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
             //SINON SI score global n'atteind pas le max défini alors on passe au joueur suivant
             nextPlayer();
         }
-    }
+        // ajouter l'effet audio
+        audioHold.play(); }
 }
-// ajouter l'effet audio
-audioHold.play(););
 
+
+
+);
+
+function regleDuJeu() {
+    var txt;
+    if (confirm("A suivre") )
+  {
+      txt = "You pressed OK!";
+    } else {
+      txt = "You pressed Cancel!";
+    }
+    document.getElementById("rule").innerHTML = txt;
+  };
