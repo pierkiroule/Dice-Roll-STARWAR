@@ -122,3 +122,49 @@ audioDice.play();
 ambiance.pause();
     );
 
+
+
+/***************************************/
+/*GERER LE STOCKAGE DE LA FORCE (HOLD)*/
+/*************************************/
+
+//Sélectionner le bouton hold 
+document.querySelector('.btn-hold').addEventListener('click', function() {
+
+// SI la partie est lancée ALORS on incrémente le score global avec les points du score courant.   
+    if(gamePlaying) {
+
+        scores[activePlayer] += roundScore; 
+
+// on affiche le score mis à jour
+        document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+// VERIFIER SI LE JOUEUR GAGNE. IF score global est égal ou superieur à score max. Dans notre cas, nous choisissons le nombre 12 car nous aimons bien le nombre 12. c'est notre nombre porte bonheur ! Plus sérieusement, cela permet de tester notre jeu plus facilement que le nombre 100.
+        if(scores[activePlayer] >= 12) {
+            // afficher une anim pour le gagnant
+            document.querySelector('.anim').style.display = 'block';
+
+            // afficher le nom du gagnant  
+            document.querySelector('#name-' + activePlayer).textContent = 'BRAVO FUTUR JEDI !';
+
+            // cacher l'image du dé (de la FORCE)
+            document.querySelector('.dice').style.display = 'none';
+
+            // activer le style css du panneau en mode winner
+            document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+
+            // désactiver le style css de panneau joueur
+            document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+
+            // FIN de partie
+            gamePlaying = false;
+
+        } else {
+            //SINON SI score global n'atteind pas le max défini alors on passe au joueur suivant
+            nextPlayer();
+        }
+    }
+}
+// ajouter l'effet audio
+audioHold.play(););
+
