@@ -42,3 +42,29 @@ function init() {
 
 };
 
+
+/*********************************/
+/* GERER LE CHANGEMENT DE JOUEUR*/
+/********************************/
+
+// Créons la fonction nextPlayer. 
+function nextPlayer() {
+    
+    // Est-ce le tour du prochain joueur si le joueur courant fait force 6. La technique repérée sur les des examples est celle de l'opérateur ternaire, condition ? exprSiVrai : exprSiFaux
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+
+    // remettre le compteur score du round à 0
+    roundScore = 0;
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+
+    // ajouter la classe style css au joueur courant
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
+
+    // Affichons-nous nos images et animations
+    document.querySelector('.dice').style.display = 'block';
+    document.querySelector('.anim').style.display = 'none';
+
+};
+
