@@ -212,12 +212,12 @@ body {
     }
     /* Dice images */
 .dice {
-    top: 300px;
+    top: 290px;
     height: 250px;
 }
 /* anim */
 .anim {
-    top: 300px;
+    top: 290px;
     
     height: 150px;
  
@@ -264,12 +264,12 @@ body {
     
     /* Dice images */
     .dice {
-        top: 360px;
+        top: 260px;
         height: 150px;
     }
     /* anim */
     .anim {
-        top: 360px;
+        top: 260px;
         height: 110px;
     }
     .btn {
@@ -333,7 +333,7 @@ body {
 }
 /* anim */
 .anim {
-    top: 310px;
+    top: 290px;
     height: 90px;
 }
 .btn {
@@ -378,7 +378,7 @@ body {
     }
         /* Dice images */
 .dice {
-    top: 390px;
+    top: 290px;
     height: 110px;
 }
 /* anim */
@@ -395,8 +395,8 @@ body {
 
 /* Specific buttons */
 
-.btn-roll { top: 50px;}
-.btn-hold { top: 100px;}
+.btn-roll { top: 50px;  font-size: 12px;}
+.btn-hold { top: 100px; font-size: 12px;}
 
 
 
