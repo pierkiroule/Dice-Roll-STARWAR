@@ -16,8 +16,7 @@ body {
     border-radius: 10%;
     width: 50%;
     float: left;
-    height: 100%;
-    padding: 20px;
+   padding: 20px;
     
 }
 
@@ -50,7 +49,7 @@ body {
     font-size: 80px;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 130px;
+    
 }
 
 .player-global-label {
@@ -63,66 +62,90 @@ body {
 
 .player-current-box {
    
-    color: rgb(253, 253, 255);
+    color: rgb(237, 0, 245);
     width: 50%;
     margin: 0 auto;
-    padding: 12px;
+    padding: 2px;
     text-align: center;
-    border-radius: 50%;
+    
 
 }
 
 .player-current-label {
     text-transform: none;
-    margin-bottom: 10px;
-    font-size: 25px;
+    font-size: 15px;
     color: rgb(255, 255, 255);
+    
    
 }
 
 .player-current-score {
-    font-size: 25px;
+    font-size: 20px;
+    top : 100px;
 }
 
 /*JOUEUR ACTIF*/
 .active { background-image: linear-gradient(rgba(16, 161, 142, 0.4), rgba(0, 0, 0, 0.4)), url(Images/fond2.jpg);
     
 }
-.active .player-name { font-weight: bold; 
+.active .player-name {font-weight: bold; 
    color: #ffffff;}
 
 
 
 /* Bouttons */
-.btn {
+.btn-pannel {
     
     position: absolute;
-    width: 100px;
+    width: 200px;
     left: 50%;
     transform: translateX(-50%);
-   font-family: Lato;
-    font-size: 12px;
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: bold; 
+    color: #ffffff;
 
 }
 
-.btn-new { top: 550px;}
-.btn-roll { top: 100px;}
-.btn-hold { top: 150px;}
+
+.btn-new { top: 550px;
+}
+.btn-roll { top: 50px;
+
+    position: absolute;
+    width: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: bold; 
+    color: #ffffff;
+    background-color: rgb(255, 0, 0);
+}
+.btn-hold { top: 100px;
+    position: absolute;
+    width: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: bold; 
+    color: #ffffff;
+    background-color: rgb(19, 116, 180);}
 .btn-rules {
+    
     top: 650px;
-    width: 200;
+    width: 400;
     font-size: 15px;
     color: rgb(22, 143, 241);
-    background: none;
-    border: none;}
+        }
 
 .btn-credit {
-    top: 900px;
-    color: #555;
+    top: 700px;
     background: none;
     border: none;
-    font-weight: 300;
-    color: #313233;
+    font-weight: 200;
+    color: #a7e73f;
  }
 
 /* Dice images */
@@ -200,7 +223,7 @@ body {
 /* Specific buttons */
 .btn-new { top: 460px;}
 .btn-roll { top: 100px;}
-.btn-hold { top: 150px;}
+.btn-hold { top: 160px;}
 .btn-rules { top: 590px;width: 400; font-size: 15px;}
     
   }
@@ -223,7 +246,7 @@ body {
         
         font-size: 19px;
         font-weight: 80;
-        margin-top: 10px;
+        margin-top: 50px;
         margin-bottom: 10px;
         }
 
@@ -270,14 +293,14 @@ body {
 }
     /* Specific buttons */
 .btn-new { top: 380px;}
-.btn-roll { top: 100px;}
-.btn-hold { top: 150px;}
+.btn-roll { top: 50px;}
+.btn-hold { top: 200px;}
 .btn-rules { top: 480px; width: 400; font-size: 15px;}
 
 
 
 .btn-credit {
-    top: 600px;
+    top: 540px;
    }
   }
   
@@ -317,7 +340,7 @@ body {
 }
 /* anim */
 .anim {
-    top: 220px;
+    top: 240px;
     height: 80px;
 }
 .btn {
@@ -328,11 +351,11 @@ body {
 /* Specific buttons */
 .btn-new { top: 400px;}
 .btn-roll { top: 100px;}
-.btn-hold { top: 150px;}
+.btn-hold { top: 250px;}
 .btn-rules { top: 480px; width: 200; font-size: 12px;}
 .btn-credit {
     top: 600px;
-    bottom: -50px;
+    
    }
 
     
@@ -386,7 +409,11 @@ body {
 .btn-new { top: 300px;}
 .btn-roll { top: 150px;}
 .btn-hold { top: 200px;}
-.btn-rules { top: 590px; width: 100; font-size: 15px;}
+.btn-rules { top: 550px; width: 100; font-size: 15px;}
+.btn-credit {
+    top: 800px;
+   
+   }
 
     }
     
