@@ -47,7 +47,7 @@ function init() {
   
   ambiance.play();
 
-  //Gestion du statut gagnant. Désactiver au démarrage du jeu
+  //Afficher le nom des joueurs. Gestion du statut gagnant. Désactiver au démarrage du jeu
   document.getElementById('name-0').textContent = 'PADAWAN 1';
   document.getElementById('name-1').textContent = 'PADAWAN 2'; 
 
