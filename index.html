@@ -23,12 +23,12 @@
     </head>
 
     <body>
-        <p class="player-global-label">Jeune Padawan, la force du 12 tu atteindras...<br> sans y perdre prudence et sagesse<br>Maître Yoda</p>
+        <p class="player-global-label">Jeune Padawan, la force du 12 tu atteindras...<br> sans y perdre prudence et sagesse...</p>
 <!-- Construction de l'interface utilisateur UI -->
 
         <!-- Player 0 panneau -->
       
-        <div class="container">
+        <div class="flex-column justify-content-center align-items-center">
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
                 <img src="Images/pad1.jpg" alt="Pad" class="pad rounded-circle" id="pad1">
@@ -48,9 +48,6 @@
              <button class="btn-new">NEW GAME</button>
              <button class="btn-rules" onclick="regleDuJeu()">REGLES</button>
              <p id="rule"></p>
-             
-             <div><button class="btn-credit" onclick="credit()">CREDIT</button>
-             <p id="credit"></p></div>
              </div>
             </div>
 

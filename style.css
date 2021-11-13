@@ -16,7 +16,7 @@ body {
     border-radius: 10%;
     width: 50%;
     float: left;
-   padding: 20px;
+   padding: 1px;
     
 }
 
@@ -58,6 +58,7 @@ body {
     font-size: 17px;
     font-weight: 400;
     color: #d7dddf;
+    padding: 20px;
 }
 
 .player-current-box {
@@ -85,7 +86,7 @@ body {
 }
 
 /*JOUEUR ACTIF*/
-.active { background-image: linear-gradient(rgba(16, 161, 142, 0.4), rgba(0, 0, 0, 0.4)), url(Images/fond2.jpg);
+.active { background-color: rgb(90, 89, 88);
     
 }
 .active .player-name {font-weight: bold; 
@@ -107,8 +108,10 @@ body {
 
 }
 
-
-.btn-new { top: 550px;
+.btn-new {
+    width: 400;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
 }
 .btn-roll { top: 50px;
 
@@ -131,37 +134,31 @@ body {
     font-size: 15px;
     font-weight: bold; 
     color: #ffffff;
-    background-color: rgb(19, 116, 180);}
-.btn-rules {
+    background-color:rgb(3, 59, 163);}
     
-    top: 650px;
+.btn-rules {
+      
     width: 400;
-    font-size: 15px;
-    color: rgb(22, 143, 241);
+    font-size: 10px;
+    color: rgb(0, 0, 0);
         }
 
-.btn-credit {
-    top: 700px;
-    background: none;
-    border: none;
-    font-weight: 200;
-    color: #a7e73f;
- }
+
 
 /* Dice images */
 .dice {
     position: absolute;
     left: 50%;
-    top: 200px;
+    top: 300px;
     transform: translateX(-50%);
-    height: 200px;
+    height: 300px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 /* anim */
 .anim {
     position: absolute;
     left: 50%;
-    top: 250px;
+    top: 300px;
     transform: translateX(-50%);
     height: 150px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
@@ -210,29 +207,25 @@ body {
     }
     /* Dice images */
 .dice {
-    top: 240px;
-    height: 110px;
+    top: 300px;
+    height: 150px;
 }
 /* anim */
 .anim {
-    top: 290px;
+    top: 300px;
     
     height: 150px;
  
 }
 /* Specific buttons */
-.btn-new { top: 460px;}
-.btn-roll { top: 100px;}
-.btn-hold { top: 160px;}
-.btn-rules { top: 590px;width: 400; font-size: 15px;}
+
+.btn-roll { top: 50px;}
+.btn-hold { top: 100px;}
+
     
   }
 
-  .btn-credit {
-    left: 50%;
-    top: 650px;
-   }
-
+ 
   /* MEDIA QUERIES */
   
   @media screen and (max-width:700px){
@@ -266,13 +259,13 @@ body {
     
     /* Dice images */
     .dice {
-        top: 240px;
-        height: 90px;
+        top: 360px;
+        height: 100px;
     }
     /* anim */
     .anim {
-        top: 190px;
-        height: 80px;
+        top: 360px;
+        height: 100px;
     }
     .btn {
         
@@ -292,18 +285,13 @@ body {
 
 }
     /* Specific buttons */
-.btn-new { top: 380px;}
+
 .btn-roll { top: 50px;}
-.btn-hold { top: 200px;}
-.btn-rules { top: 480px; width: 400; font-size: 15px;}
+.btn-hold { top: 100px;}
 
 
 
-.btn-credit {
-    top: 540px;
-   }
-  }
-  
+
   @media screen and (max-width:600px){
 
     .player-0-panel, .player-1-panel {
@@ -334,14 +322,14 @@ body {
      /* Dice images */
 .dice {
 
-    top: 190px;
-    height: 80px;
+    top: 290px;
+    height: 90px;
     
 }
 /* anim */
 .anim {
-    top: 240px;
-    height: 80px;
+    top: 310px;
+    height: 90px;
 }
 .btn {
     
@@ -349,21 +337,16 @@ body {
     font-size: 13px;
 }
 /* Specific buttons */
-.btn-new { top: 400px;}
-.btn-roll { top: 100px;}
-.btn-hold { top: 250px;}
-.btn-rules { top: 480px; width: 200; font-size: 12px;}
-.btn-credit {
-    top: 600px;
-    
-   }
 
-    
+.btn-roll { top: 50px;}
+.btn-hold { top: 100px;}
+
+
   }
 
   
   
-  @media screen and (max-width:480px){
+  @media screen and (max-width:450px){
     .player-0-panel, .player-1-panel {
     
         border-radius: 0%;
@@ -390,13 +373,13 @@ body {
     }
         /* Dice images */
 .dice {
-    top: 190px;
+    top: 390px;
     height:80px;
 }
 /* anim */
 .anim {
-    top: 190px;
-    height: 60px;
+    top: 290px;
+    height: 80px;
 }
 .btn {
     
@@ -406,18 +389,14 @@ body {
 }
 
 /* Specific buttons */
-.btn-new { top: 300px;}
-.btn-roll { top: 150px;}
-.btn-hold { top: 200px;}
-.btn-rules { top: 550px; width: 100; font-size: 15px;}
-.btn-credit {
-    top: 800px;
-   
-   }
+
+.btn-roll { top: 50px;}
+.btn-hold { top: 100px;}
+
+
 
     }
     
-
-
+    
 
 

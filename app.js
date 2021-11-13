@@ -202,7 +202,7 @@ document.querySelector('.btn-hold').addEventListener('click', function()
 /**************/
 function regleDuJeu() {
    
-   confirm("Il vous faut chers Padawans apprendre à capter la force avec prudence et sagesse. Concentrez vous et pensez bien à stocker la force au moment opportun. Vous désirez capter la force mais attention... Trop de force et d'impatience... tue la force virtuelle accumulée (La PADAFORCE). Votre mission est de cumuler 12 points de Jedï force. Que le meilleur gagne ! Mister YODA") 
+   confirm("Il vous faut chers Padawans apprendre à capter la force avec prudence et sagesse. Concentrez vous et pensez bien à stocker la force au moment opportun. Vous désirez capter la force mais attention... Trop de force et d'impatience... tue la force virtuelle accumulée (La PADAFORCE). Votre mission est de cumuler 12 points de Jedï force. Que le meilleur gagne ! Mister YODA           CREDITS : Merci à giphy.com pour les gifs et pierkiroule pour les sons") 
   };
 
   /****************/
@@ -210,7 +210,7 @@ function regleDuJeu() {
 /**************/
 function credit() {
    
-    confirm("Merci à giphy.com pour les gifs et pierkiroule pour les sons") 
+    confirm("") 
    };
  
    
