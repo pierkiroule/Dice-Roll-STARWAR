@@ -103,7 +103,7 @@ body {
 .btn-pannel {
     
     position: absolute;
-    width: 200px;
+    width: 300px;
     left: 50%;
     transform: translateX(-50%);
     font-family: Lato;
@@ -127,8 +127,8 @@ body {
     font-family: Lato;
     font-size: 15px;
     font-weight: bold; 
-    color: #080505;
-    background-color: rgb(255, 187, 0);
+    color: #9b1801;
+    background-color: rgb(255, 166, 0);
 }
 .btn-hold { top: 100px;
     position: absolute;
